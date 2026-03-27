@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "5b85cdbcb5fbf1623c7a",
+  "position": {
+    "x": 527,
+    "y": 0,
+    "z": 2,
+    "height": 467,
+    "width": 507,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimension_customer"
+                    }
+                  },
+                  "Property": "BuyingGroup"
+                }
+              },
+              "queryRef": "dimension_customer.BuyingGroup",
+              "nativeQueryRef": "BuyingGroup",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimension_customer"
+                    }
+                  },
+                  "Property": "BillToCustomer"
+                }
+              },
+              "queryRef": "dimension_customer.BillToCustomer",
+              "nativeQueryRef": "BillToCustomer",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bd678feefc79e1bfb882",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimension_customer"
+              }
+            },
+            "Property": "BillToCustomer"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "badb7245955a2117a66c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimension_customer"
+              }
+            },
+            "Property": "BuyingGroup"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
